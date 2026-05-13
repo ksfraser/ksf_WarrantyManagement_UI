@@ -1,6 +1,6 @@
 <?php
 
-namespace Ksfraser\WarrantyManagementUI;
+namespace Ksfraser\WarrantyManagement;
 
 class WarrantyProductPresenter
 {
