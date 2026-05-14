@@ -24,12 +24,12 @@ class WarrantyProductPresenter
         
         foreach ($this->products as $product) {
             $html .= '<tr>';
-            $html .= '<td>' . htmlspecialchars($product['sku_id']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($product['provider_type']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($product['term_type']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($product['term_months']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($product['cost_to_provide']) . '</td>';
-            $html .= '<td>' . htmlspecialchars($product['max_claims']) . '</td>';
+            $html .= '<td>' . htmlspecialchars($product['sku_id'] ?? '') . '</td>';
+            $html .= '<td>' . htmlspecialchars($product['provider_type'] ?? 'N/A') . '</td>';
+            $html .= '<td>' . htmlspecialchars($product['term_type'] ?? 'N/A') . '</td>';
+            $html .= '<td>' . htmlspecialchars((string)($product['term_months'] ?? 0)) . '</td>';
+            $html .= '<td>' . htmlspecialchars((string)($product['cost_to_provide'] ?? 0)) . '</td>';
+            $html .= '<td>' . htmlspecialchars((string)($product['max_claims'] ?? 0)) . '</td>';
             $html .= '</tr>';
         }
         
